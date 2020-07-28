@@ -13,7 +13,7 @@ In this assignment, you will use your knowledge of file reading, looping, and li
 Build a "mimic" dict that maps each word that appears in the [alice.txt](./alice.txt) file to a list of all the words that immediately follow that word in the file. The list of words can be in any order and should include duplicates. For example, the key `"and"` might have the list `["then", "best", "then", "after", ...]` listing all the words which came after "and" in the entire text.  Don't worry about any punctuation that is attached to words-- leave it there.
 
 For development, use the short [imdev.txt](./imdev.txt) file. When your mimic dictionary is created from this file, it should look like this when printed:
-```python
+```
 {
     '' : ['I']
     'a' : ['software']
@@ -54,7 +54,9 @@ and there was in a few minutes, and tumbled head first, and look at the words
 
 For fun, try feeding your program to itself as input. 
     
-```console
+```
 $ python mimic.py mimic.py
 ```
 
+## Going Further
+How might you implement this same code using a Python [defaultdict](https://docs.python.org/3/library/collections.html#defaultdict-objects)?
