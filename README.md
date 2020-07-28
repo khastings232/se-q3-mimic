@@ -14,9 +14,13 @@ This assignment has built-in tests to help you during development. Make sure all
 ```console
 $ python -m unittest discover tests
 ```
-You can also run these same tests using the test-tube icon built in to the VSCode editor.  This is a really useful tool and we highly recommend to learn it. 
+You can also run these same tests using the `Test Explorer` extension built in to the VSCode editor, by enabling automatic test discovery.  This is a really useful tool and we highly recommend to learn it.
 
 https://code.visualstudio.com/docs/python/testing#_test-discovery
+
+- Test framework is `unittest`
+- Test folder pattern is `test*`
+- Test name pattern is `test*`
 
 
 ## Part A
