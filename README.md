@@ -9,6 +9,16 @@ In this assignment, you will use your knowledge of file reading, looping, and li
 - Learn about reading text from a file
 - More practice with looping
 
+## Testing
+This assignment has built-in tests to help you during development. Make sure all tests are passing before you submit your solution. You can invoke the tests from the command line:
+```console
+$ python -m unittest discover tests
+```
+You can also run these same tests using the test-tube icon built in to the VSCode editor.  This is a really useful tool and we highly recommend to learn it. 
+
+https://code.visualstudio.com/docs/python/testing#_test-discovery
+
+
 ## Part A
 Build a "mimic" dict that maps each word that appears in the [alice.txt](./alice.txt) file to a list of all the words that immediately follow that word in the file. The list of words can be in any order and should include duplicates. For example, the key `"and"` might have the list `["then", "best", "then", "after", ...]` listing all the words which came after "and" in the entire text.  Don't worry about any punctuation that is attached to words-- leave it there.
 
