@@ -49,13 +49,14 @@ def create_mimic_dict(filename):
     pass
 
 
-def print_mimic(mimic_dict, start_word):
-    """Given a previously created mimic_dict and start_word,
-    prints 200 random words from mimic_dict as follows:
+def print_mimic_random(mimic_dict, num_words):
+    """Given a previously created mimic_dict and num_words,
+    prints random words from mimic_dict as follows:
+        - Use a start_word of '' (empty string)
         - Print the start_word
         - Look up the start_word in your mimic_dict and get its next-list
         - Randomly select a new word from the next-list
-        - Repeat this process 200 times
+        - Repeat this process num_words times
     """
     # +++your code here+++
     pass
@@ -68,7 +69,7 @@ def main(args):
     # Create and print the jumbled (mimic) version of the input file
     print(f'Using {filename} as input:\n')
     d = create_mimic_dict(filename)
-    print_mimic(d, '')
+    print_mimic_random(d, 200)
 
 
 if __name__ == '__main__':

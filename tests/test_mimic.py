@@ -1,6 +1,6 @@
 #!/usr/bin/env python3
 """
-Unit tests for mimic
+Unit tests for mimic assignment.
 
 Students should not edit this file.
 """
@@ -12,7 +12,7 @@ from contextlib import redirect_stdout
 from io import StringIO
 
 # Kenzie devs: change this to 'soln.mimic' to test solution
-PKG_NAME = 'soln.mimic'
+PKG_NAME = 'mimic'
 
 imdev = {
     '': ['I'],
@@ -46,24 +46,32 @@ class TestMimic(unittest.TestCase):
             )
 
     def test_create_mimic_dict_2(self):
-        """Check if create_mimic_dict contains correct keys & values"""
+        """Check if there is one entry for '' in the dict"""
+        result = self.module.create_mimic_dict("imdev.txt")
+        self.assertIn(
+            '', result,
+            "Mimic dict should have one key entry for empty string '' "
+            )
+
+    def test_create_mimic_dict_3(self):
+        """Check if create_mimic_dict contains expected keys & values"""
         result = self.module.create_mimic_dict("imdev.txt")
         self.assertDictEqual(
             result, imdev,
-            "Your mimic dict output does match expected output"
+            "Mimic dict output for imdev.txt does match expected contents"
             )
 
-    def test_print_mimic_200(self):
-        """Check if 200 words are printed"""
+    def test_print_mimic(self):
+        """Check if requested number of words are printed"""
         d = self.module.create_mimic_dict("imdev.txt")
         buffer = StringIO()
         with redirect_stdout(buffer):
-            self.module.print_mimic(d, '')
-        output = buffer.getvalue()
+            self.module.print_mimic_random(d, 243)
+            output = buffer.getvalue()
         word_count = len(output.split())
         self.assertEqual(
-            word_count, 200,
-            "There should be exactly 200 words printed"
+            word_count, 243,
+            "Requested num_words does not match actual printed word count"
             )
 
     def test_print_mimic_no_newlines(self):
@@ -71,7 +79,7 @@ class TestMimic(unittest.TestCase):
         d = self.module.create_mimic_dict("imdev.txt")
         buffer = StringIO()
         with redirect_stdout(buffer):
-            self.module.print_mimic(d, '')
+            self.module.print_mimic_random(d, 200)
         output = buffer.getvalue()
         self.assertNotIn(
             '\n', output,
@@ -83,14 +91,14 @@ class TestMimic(unittest.TestCase):
         d = self.module.create_mimic_dict("imdev.txt")
         buffer = StringIO()
         with redirect_stdout(buffer):
-            self.module.print_mimic(d, '')
+            self.module.print_mimic_random(d, 100)
             output1 = buffer.getvalue()
         with redirect_stdout(buffer):
-            self.module.print_mimic(d, '')
+            self.module.print_mimic_random(d, 100)
             output2 = buffer.getvalue()
         self.assertNotEqual(
             output1, output2,
-            "Each print output should be randomly different"
+            "Each printed output should be randomly different"
             )
 
 

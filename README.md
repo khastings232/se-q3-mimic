@@ -1,11 +1,16 @@
 <img height="120px" src="img/mimicry.jpg" />
 
 # Mimic 
+In this assignment, you will use your knowledge of file reading, looping, and list and dictionary manipulation to map the words from the entire Alice's Adventures in Wonderland story and produce a cryptic, jumbled version of your own.
 
-In this assignment, you will use your knowledge of file reading, looping, and list and dictionary manipulation to map the words from Alice's Adventures in Wonderland and produce a cryptic, jumbled version of your own.
+# Objectives
+- Use python dictionaries and lists
+- Use the `random` library
+- Learn about reading text from a file
+- More practice with looping
 
 ## Part A
-Build a "mimic" dict that maps each word that appears in the [alice.txt](./alice.txt) file to a list of all the words that immediately follow that word in the file. The list of words can be in any order and should include duplicates. For example, the key `"and"` might have the list `["then", "best", "then", "after", ...]` listing all the words which came after "and" in the entire text.
+Build a "mimic" dict that maps each word that appears in the [alice.txt](./alice.txt) file to a list of all the words that immediately follow that word in the file. The list of words can be in any order and should include duplicates. For example, the key `"and"` might have the list `["then", "best", "then", "after", ...]` listing all the words which came after "and" in the entire text.  Don't worry about any punctuation that is attached to words-- leave it there.
 
 For development, use the short [imdev.txt](./imdev.txt) file. When your mimic dictionary is created from this file, it should look like this when printed:
 ```python
@@ -25,11 +30,11 @@ For development, use the short [imdev.txt](./imdev.txt) file. When your mimic di
 Notice that the first entry in the dictionary above is the empty string `""`.  Since we are creating a dictionary of "next word" lists, it implies that there exists a previous word key for each next-list value.  This, of course, is true except in the case of the first entry of the dictionary. Use the empty string as a seed for the first entry.
 
 ## Part B
-Output your own jumbled version of the story!
+Output your own jumbled version of the story!  With the mimic dict created, it's fairly easy to emit random text that mimics the original.
 
-With the mimic dict created, it's fairly easy to emit random text that mimics the original. Print a word, then look up what words might come next and pick one at random as the next word.
+Complete the `print_mimic_random()` function in the mimic.py module. Print a word, then look up what words might come next and pick one at random as the next word. See the comments in the code for more detail on how to implement this.  The output words should be printed with a space ' ' delimiter between each word.  There should not be any newline \n characters in the printed output.
 
-## Sample Output, using alice.txt as input
+## Sample Output, using alice.txt as input, printing 200 words:
 ```console
 Alice's shoulder, and seemed to the same order,' continued the hall; but, 
 after glaring at all the Mock Turtle: `crumbs would be a good opportunity 
