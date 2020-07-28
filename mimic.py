@@ -61,15 +61,19 @@ def print_mimic(mimic_dict, start_word):
     pass
 
 
-# Provided main(), calls mimic_dict() and print_mimic()
-def main():
-    if len(sys.argv) != 2:
-        print('usage: python mimic.py file-to-read')
-        sys.exit(1)
+def main(args):
+    # Get input filename from command line args
+    filename = args[0]
 
-    d = create_mimic_dict(sys.argv[1])
+    # Create and print the jumbled (mimic) version of the input file
+    print(f'Using {filename} as input:\n')
+    d = create_mimic_dict(filename)
     print_mimic(d, '')
 
 
 if __name__ == '__main__':
-    main()
+    if len(sys.argv) != 2:
+        print('usage: python mimic.py file-to-read')
+    else:
+        main(sys.argv[1:])
+    print('\n\nCompleted.')
