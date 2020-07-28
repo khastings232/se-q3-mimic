@@ -31,7 +31,20 @@ With the mimic dict created, it's fairly easy to emit random text that mimics th
 
 ## Sample Output, using alice.txt as input
 ```console
-Alice's shoulder, and seemed to the same order,' continued the hall; but, after glaring at all the Mock Turtle: `crumbs would be a good opportunity of authority over the Mouse. `--I proceed. "Edwin and she came a child!' said the Gryphon: and all round it, and sharks are all over the King replied. `Yes, please do!' said nothing. `When I'M a whisper, half no right distance--but then Alice, and it. She went on, three weeks!' `I'm glad there seemed to sing this:-- `Fury said Alice, and she had to see Shakespeare, in her hands at the Gryphon, and, last word with a minute or other; but he had gone down off staring at the Cat, she began: `O Mouse, do next! If they lessen from being drowned in the Panther received knife and turns out again. In the words did not to say "What a Caterpillar called him as she was to the court, `Bring me see--how IS the roof of delight, which the King said, just explain the first one for two guinea-pigs, who only yesterday things are you?' She was gone, and there was in a few minutes, and tumbled head first, and look at the words
+Alice's shoulder, and seemed to the same order,' continued the hall; but, 
+after glaring at all the Mock Turtle: `crumbs would be a good opportunity 
+of authority over the Mouse. `--I proceed. "Edwin and she came a child!' 
+said the Gryphon: and all round it, and sharks are all over the King replied. 
+`Yes, please do!' said nothing. `When I'M a whisper, half no right distance--
+but then Alice, and it. She went on, three weeks!' `I'm glad there seemed to
+sing this:-- `Fury said Alice, and she had to see Shakespeare, in her hands
+at the Gryphon, and, last word with a minute or other; but he had gone down
+off staring at the Cat, she began: `O Mouse, do next! If they lessen from 
+being drowned in the Panther received knife and turns out again. In the words
+did not to say "What a Caterpillar called him as she was to the court, `Bring
+me see--how IS the roof of delight, which the King said, just explain the
+first one for two guinea-pigs, who only yesterday things are you?' She was gone,
+and there was in a few minutes, and tumbled head first, and look at the words
 ```
 
 For fun, try feeding your program to itself as input. 
