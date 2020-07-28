@@ -1,4 +1,4 @@
-<img height="120px" src="img/mimicry.png" />
+<img height="120px" src="img/mimicry.jpg" />
 
 # Mimic 
 
