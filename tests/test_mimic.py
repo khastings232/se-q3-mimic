@@ -8,6 +8,7 @@ Students should not edit this file.
 import sys
 import importlib
 import unittest
+import subprocess
 from contextlib import redirect_stdout
 from io import StringIO
 
@@ -100,6 +101,15 @@ class TestMimic(unittest.TestCase):
             output1, output2,
             "Each printed output should be randomly different"
             )
+
+    def test_flake8(self):
+        """Checking for PEP8/flake8 compliance"""
+        result = subprocess.run(['flake8', self.module.__file__])
+        self.assertEqual(result.returncode, 0)
+
+    def test_author_string(self):
+        """Checking for __author__ string"""
+        self.assertNotEqual(self.module.__author__, '???')
 
 
 if __name__ == '__main__':
