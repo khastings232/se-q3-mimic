@@ -12,6 +12,9 @@ import subprocess
 from contextlib import redirect_stdout
 from io import StringIO
 
+# suppress __pycache__ and .pyc files
+sys.dont_write_bytecode = True
+
 # Kenzie devs: change this to 'soln.mimic' to test solution
 PKG_NAME = 'mimic'
 
